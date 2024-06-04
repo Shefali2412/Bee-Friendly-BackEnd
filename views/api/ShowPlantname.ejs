@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Data</title>
+</head>
+<body>
+    <h1>Plant Data</h1>
+    <% if (plants && plants.length > 0) { %>
+        <ul>
+            <% plants.forEach(plant => { %>
+                <li>
+                    <form id="searchForm"  action="/api/searchNametreflo" method="get">
+                        <label id= `${<%= plant.item.name %>}` ></label>
+                    </form>
+                    <h2><%= plant.item.name %></h2>
+                    <ul>
+                        <% for (let specimen of plant.item.specimens)     { %>
+                            <p><li><%= specimen.collectionType %> <%= specimen.unitID %></li></p>
+                            <p>Id:<%= specimen.associatedMultiMediaUris %></p>
+                           
+                            <ul>
+                                <% for (let ident of specimen.identifications)     { %>
+                                    <h2><%=ident.scientificName.fullScientificName%></h2>
+                                    
+                                    <% } %>
+                            </ul>
+                           
+                           
+                            
+                            <hr></hr>
+                            <% } %>
+                    </ul>
+        
+
+                    
+                </li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No plants found.</p>
+    <% } %>
+</body>
+</html>

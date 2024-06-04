@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Data</title>
+</head>
+<body>
+    <h1>Plant Data</h1>
+    <% if (plants && plants.length > 0) { %>
+        <ul>
+            <% plants.forEach(plant => { %>
+                <li>
+                    <h2><%= plant.common_name || 'No common name' %></h2>
+                    <p>Scientific Name: <%= plant.scientific_name %></p>
+                    <p>Family: <%= plant.family_common_name || 'No family name' %></p>
+                    <p>bloom_months: <%= plant.bloom_months || 'No info' %></p>
+                    <p>image: <image src=<%= plant.image_url %> </p>
+                </li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>No plants found.</p>
+    <% } %>
+</body>
+</html>

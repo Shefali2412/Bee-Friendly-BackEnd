@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Plants</title>
+</head>
+<body>
+    <h1>Filter Plants</h1>
+    <form id="filterForm" action="/api/plants" method="get">
+        <section class="typePlants" id="typePlants">
+            <ul>
+                <div>
+                <li ><label  for="Season_pl">Seasonal Plants:</label>
+                    <label><input type="checkbox" name="bloom_months" value="jan"> January</label>
+                    <label><input type="checkbox" name="bloom_months" value="feb"> February</label>
+                    <label><input type="checkbox" name="bloom_months" value="mar"> March</label>
+                    <label><input type="checkbox" name="bloom_months" value="apr"> April</label>
+                    <label><input type="checkbox" name="bloom_months" value="may"> May</label>
+                    <label><input type="checkbox" name="bloom_months" value="jun"> Jun</label>
+                    <label><input type="checkbox" name="bloom_months" value="jul"> July</label>
+                    <label><input type="checkbox" name="bloom_months" value="aug"> August</label>
+                    <label><input type="checkbox" name="bloom_months" value="sep"> Septemper</label>
+                    <label><input type="checkbox" name="bloom_months" value="oct"> October</label>
+                    <label><input type="checkbox" name="bloom_months" value="nov"> Novamber</label>
+                    <label><input type="checkbox" name="bloom_months" value="dec"> December</label>
+
+                    
+                    
+                </li>
+            </div>
+            <div>
+                <li >
+                    <label  for="Lightamount">Sunlight:</label>
+                
+                    <select id="Lightamount" >
+                        <option value="lowLight">Low</option>
+                        <option value="mediumLight">Medium</option>
+                        <option value="highLight">High</option>
+                    </select>
+                </li>
+            </div>
+               <div name="flower_color">
+                <li>
+                    <label  for="flower_color">Flower Color:</label>
+                   
+                    <div>
+                        <label><input type="checkbox" name="flower_color" value="red"> Red</label>
+                        <label><input type="checkbox" name="flower_color" value="green"> Green</label>
+                        <label><input type="checkbox" name="flower_color" value="blue"> Blue</label>
+                        <label><input type="checkbox" name="flower_color" value="yellow"> Yellow</label>
+                        <label><input type="checkbox" name="flower_color" value="lime"> Lime</label>
+                        <label><input type="checkbox" name="flower_color" value="cyan"> Cyan</label>
+                        <label><input type="checkbox" name="flower_color" value="magenta"> Magenta</label>
+                        <label><input type="checkbox" name="flower_color" value="purple"> Purple</label>
+                        <label><input type="checkbox" name="flower_color" value="grey"> Grey</label>
+                        <label><input type="checkbox" name="flower_color" value="brown"> Brown</label>
+                        
+                        <label><input type="checkbox" name="flower_color" value="black"> Black</label>
+                    </div>
+
+                </li>
+               </div>
+                
+            </ul>
+        </section>
+        <button type="submit">Search</button>
+    </form>
+</body>
+</html>
+  
+   
